@@ -66,3 +66,42 @@ test();
 
 function doNothing() {}
 console.log(doNothing() === undefined);
+
+
+function sayHello(name) {
+    return 'Hello, '+ name;
+}
+
+console.log(sayHello('Anton'));
+
+
+
+function returnNeighboringNumbers(i) {
+    const arr = [];
+    arr[0] = i - 1;
+    arr[1] = i;
+    arr[2] = i + 1;
+    return arr;
+}
+
+console.log(returnNeighboringNumbers(7));
+
+
+function getMathResult(a, b) {
+    let result = '';
+    if(typeof b !== 'number' || b <= 0) {
+        result = a;
+    } else {
+        for(let i = 0; i < b; i++) {
+            if(i == b - 1) {
+                result += a + (a * i);
+            } else {
+                result += a + (a * i) + '---';
+            }
+        }    
+    }
+    return result;
+}
+
+console.log(getMathResult(3, 6));
+
