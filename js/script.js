@@ -84,7 +84,7 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
     for(let i = 0; i < 2; i++) {
-        const a = prompt('One of films you saw recently?', '');
+        const a = prompt('One of films you saw recently?', '').trim();
         const b = +prompt('how you rate it?', '1-10');
         if (a != null && b != null && a != '' && b != '' && a.length < 50 && isNaN(b) != true) {
             personalMovieDB.movies[a] = b;

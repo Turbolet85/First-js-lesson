@@ -26,6 +26,8 @@ console.log(logg.substring(10, 17));
 
 
 
+
+
 const num = 12.2;
 console.log(Math.round(num));
 
