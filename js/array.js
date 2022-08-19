@@ -4,11 +4,9 @@
 // arr.sort((a, b) => a - b);
 // console.log(arr);
 
-
 // function compareNum(a, b) {
 //     return a - b;
 // }
-
 
 // arr[99] =0;
 // console.log(arr.length);
@@ -30,7 +28,6 @@
 //     console.log(`${i}: ${item} inside of array ${arr}`);
 // });
 
-
 // const str = prompt('', '');
 // const products = str.split(', ');
 // products.sort();
@@ -39,11 +36,9 @@
 // const oldArr = ['a', 'b', 'c'];
 // const newArr = oldArr.slice();
 
-
 // newArr.push('d');
 // console.log(newArr);
 // console.log(oldArr);
-
 
 // const video = ['youtube', 'vimeo', 'rutube'],
 //       blogs = ['wordpress', 'lifejourmal', 'medium'],
@@ -69,14 +64,13 @@
 //         return 'Семья пуста';
 //     } else {
 //         const arrMod =  a.join(' ');
-//         return `Семья состоит из: ${arrMod}`;    
+//         return `Семья состоит из: ${arrMod}`;
 //     }
 // }
 
 // // console.log(showFamily(family));
 
 // // console.log(family.length);
-
 
 // const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
@@ -85,7 +79,6 @@
 // }
 
 // standardizeStrings(favoriteCities);
-
 
 // const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 
@@ -99,8 +92,6 @@
 // }
 // console.log(showFamily(family));
 
-
-
 // const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
 // function standardizeStrings(array) {
@@ -111,26 +102,25 @@
 
 // standardizeStrings(favoriteCities);
 
-
 // const someString = 'This is some strange string';
 
-// function reverse(str) {
-//     if(typeof str != 'string'){
-//         return "Ошибка!";
-//     } else {
-//         let result = '';
-//         let arr = str.split(' ');
-//             arr = arr.reverse();
-//         arr.forEach(element => {
-//             let word = element.split('');
-//             word = word.reverse();
-//             word = word.join('');
-//             result += `${word} `;
-//         });
-//         result = result.slice(0, -1);
-//         return result;    
-//     }
-// }
+function reverse(str) {
+	if (typeof str != 'string') {
+		return 'Ошибка!';
+	} else {
+		let result = '';
+		let arr = str.split(' ');
+		arr = arr.reverse();
+		arr.forEach((element) => {
+			let word = element.split('');
+			word = word.reverse();
+			word = word.join('');
+			result += `${word} `;
+		});
+		result = result.slice(0, -1);
+		return result;
+	}
+}
 
 // console.log(reverse(someString));
 
@@ -142,25 +132,20 @@
 
 // console.log(reverse(someString));
 
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
+function availableCurr(arr, missingCurr) {
+	delete arr[arr.indexOf(missingCurr)];
+	let result = 'Доступные валюты:\n';
+	if (arr.length < 1) {
+		return 'Нет доступных валют';
+	} else {
+		arr.forEach((element) => {
+			result += `${element}\n`;
+		});
+	}
+	return result;
+}
 
-
-
-// const baseCurrencies = ['USD', 'EUR'];
-// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
-
-// function availableCurr(arr, missingCurr) {
-//     delete arr[arr.indexOf(missingCurr)];
-//     let result = 'Доступные валюты:\n';
-//     if(arr.length < 1) { 
-//         return 'Нет доступных валют';
-//     } else {
-//         arr.forEach(element => {
-//             result += `${element}\n`;
-//         });
-//     }
-//     return result;
-// }
-
-// console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
-
+console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));

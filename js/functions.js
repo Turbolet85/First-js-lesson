@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // // functions
 // let num = 20;
@@ -32,14 +32,11 @@
 
 // logger();
 
-
 // const calc = (a, b) => a + b;
-
 
 // const usdCurr = 28;
 // const eurCurr = 32;
 // const discount = 0.9;
-
 
 // function convert (amount, curr) {
 //     return curr * amount;
@@ -69,14 +66,11 @@
 // function doNothing() {}
 // console.log(doNothing() === undefined);
 
-
 // function sayHello(name) {
 //     return 'Hello, '+ name;
 // }
 
 // console.log(sayHello('Anton'));
-
-
 
 // function returnNeighboringNumbers(i) {
 //     const arr = [];
@@ -87,7 +81,6 @@
 // }
 
 // console.log(returnNeighboringNumbers(7));
-
 
 // function getMathResult(a, b) {
 //     let result = '';
@@ -100,14 +93,12 @@
 //             } else {
 //                 result += a + (a * i) + '---';
 //             }
-//         }    
+//         }
 //     }
 //     return result;
 // }
 
 // console.log(getMathResult(3, 6));
-
-
 
 // const mult = () => {
 //     console.log('eee boy!');
@@ -116,7 +107,6 @@
 // mult();
 
 ////////////////////////////////////////////////////////////////
-
 
 // function calculateVolumeAndArea(edgeLenght) {
 //     const volume = Math.pow(edgeLenght, 3);
@@ -131,17 +121,13 @@
 
 // console.log(calculateVolumeAndArea(5));
 
-
-
 // function getCoupeNumber(num) {
 //     const vagon = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,16], [17,18,19,20], [21,22,23,24], [25,26,27,28], [29,30,31,32], [33,34,35,36]];
 //     const result = vagon.findIndex(search => search.some(place => place === num));
 //     return result + 1;
 // }
 
-
 // console.log(getCoupeNumber(11));
-
 
 // function getCoupeNumber(num) {
 //     const vagon = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,16], [17,18,19,20], [21,22,23,24], [25,26,27,28], [29,30,31,32], [33,34,35,36]];
@@ -155,12 +141,11 @@
 //             if(vagon[i].indexOf(num) >= 0){
 //                 return i + 1;
 //             }
-//         }       
+//         }
 //     }
-// }  
+// }
 
 // console.log(getCoupeNumber(38));
-
 
 // function getTimeFromMinutes(mins) {
 //     const hours = parseInt(mins / 60);
@@ -180,64 +165,58 @@
 
 // console.log(getTimeFromMinutes(370));
 
-
 // function findMaxNumber(a, b, c, d) {
 //     if(typeof(a) !== 'number'|| typeof(b) !== 'number'|| typeof(c) !== 'number'|| typeof(d) !== 'number') {
 //         return 0;
 //     } else {
 //         return Math.max(a, b, c, d);
 //     }
-    
+
 // }
 
 // console.log(findMaxNumber(2, 4, 7, 12.1));
 
-
 function fib(num) {
-    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
-        return "";
-    }
-    let result = '';
-    let first = 0;
-    let second = 1;
-    for(let i = 0; i < num; i++) {
-        if (i + 1 === num) {
-            result += `${first}`;
-        } else {
-            result += `${first} `;
-        }
-        let third = first + second;
-        first = second;
-        second = third;
-    }
-    return result;
+	if (typeof num !== 'number' || num <= 0 || !Number.isInteger(num)) {
+		return '';
+	}
+	let result = '';
+	let first = 0;
+	let second = 1;
+	for (let i = 0; i < num; i++) {
+		if (i + 1 === num) {
+			result += `${first}`;
+		} else {
+			result += `${first} `;
+		}
+		let third = first + second;
+		first = second;
+		second = third;
+	}
+	return result;
 }
 
 // console.log(fib(10));
 
-
-
 function first() {
-    //do something
-    setTimeout(function() {
-        console.log(1);
-    }, 500);
+	//do something
+	setTimeout(function () {
+		console.log(1);
+	}, 500);
 }
 
 function second() {
-    console.log(2);
+	console.log(2);
 }
 
 first();
 second();
 
-
 function learnJS(lang, callback) {
-    console.log(`I'm learning: ${lang}`);
-    callback();
+	console.log(`I'm learning: ${lang}`);
+	callback();
 }
 
-learnJS('Javascript', function() {
-    console.log('I learned this lesson');
+learnJS('Javascript', function () {
+	console.log('I learned this lesson');
 });
-

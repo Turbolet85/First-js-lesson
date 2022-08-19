@@ -17,8 +17,6 @@
 
 // (num == 50) ? console.log('Ok!') : console.log('Error!');
 
-
-
 // const num = 51;
 
 // switch (num) {
@@ -35,7 +33,6 @@
 //         console.log('Not this time');
 //         break;
 // }
-
 
 // const hamburger = 5;
 // const fries = 1;

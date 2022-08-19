@@ -1,4 +1,3 @@
-
 //cyles
 
 // let num = 50;
@@ -8,13 +7,11 @@
 //     num++;
 // }
 
-
 // do {
 //     console.log(num);
 //     num++;
 // }
 // while (num < 55);
-
 
 // for (let i = 1; i < 10; i++) {
 //     if (i===6) {
@@ -24,17 +21,12 @@
 //     console.log(i);
 // }
 
-
 // for (let i = 0; i < 3; i++) {
 //     console.log(i);
 //     for (let j = 0; j < 3; j++) {
 //         console.log(j);
 //     }
 // }
-
-
-
-
 
 // first: for (let i = 0; i < 3; i++) {
 //     console.log(`First level: ${i}`);
@@ -43,10 +35,9 @@
 //         for (let k = 0; k < 3; k++) {
 //             if (k === 2) continue first; //break
 //             console.log(`Third level: ${k}`);
-//         }    
+//         }
 //     }
 // }
-
 
 // let begin = 4;
 
@@ -55,7 +46,6 @@
 //     console.log(begin);
 // }
 
-
 // let begin = 21;
 
 // for(let i = 0; i < 8; i++) {
@@ -63,14 +53,12 @@
 //     console.log(begin);
 // }
 
-
 // let begin = 0;
 
 // for(let i = 0; i < 5; i++) {
 //     begin = begin + 2;
 //     console.log(begin);
 // }
-
 
 // for (let i = 2; i <= 16; i++) {
 //     if (i % 2 === 0) {
@@ -80,14 +68,12 @@
 //     }
 // }
 
-
 // let num = 1;
 
 // while (num < 15) {
 //     num = num + 2;
 //     console.log(num);
 // }
-
 
 // const arrayOfNumbers = [];
 
@@ -99,7 +85,6 @@
 // // Не трогаем
 // return arrayOfNumbers;
 
-
 // const arr = [3, 5, 8, 16, 20, 23, 50];
 // const result = [];
 
@@ -107,7 +92,6 @@
 //     result[i] = arr[i];
 // }
 // console.log(result);
-
 
 // const data = [5, 10, 'Shopping', 20, 'Homework'];
 
@@ -119,7 +103,6 @@
 //     }
 // }
 
-
 // const data = [5, 10, 'Shopping', 20, 'Homework'];
 // const result = [];
 
@@ -128,8 +111,6 @@
 //     result[i] = data[modIndex-i];
 // }
 // console.log(result);
-
-
 
 // let result = '';
 // const lines = 7;

@@ -1,4 +1,3 @@
-
 // console.log( NaN || 2 || undefined );
 // console.log( NaN && 2 && undefined );
 // console.log( 1 && 2 && 3 );
@@ -15,7 +14,7 @@
 // const nuggets = 2;
 
 // // console.log(hamburger === 3 && cola);
- 
+
 // if (hamburger === 3 && cola || fries === 3 && nuggets) {
 //    console.log('Done!');
 // }
