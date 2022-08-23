@@ -104,23 +104,23 @@
 
 // const someString = 'This is some strange string';
 
-function reverse(str) {
-	if (typeof str != 'string') {
-		return 'Ошибка!';
-	} else {
-		let result = '';
-		let arr = str.split(' ');
-		arr = arr.reverse();
-		arr.forEach((element) => {
-			let word = element.split('');
-			word = word.reverse();
-			word = word.join('');
-			result += `${word} `;
-		});
-		result = result.slice(0, -1);
-		return result;
-	}
-}
+// function reverse(str) {
+// 	if (typeof str != 'string') {
+// 		return 'Ошибка!';
+// 	} else {
+// 		let result = '';
+// 		let arr = str.split(' ');
+// 		arr = arr.reverse();
+// 		arr.forEach((element) => {
+// 			let word = element.split('');
+// 			word = word.reverse();
+// 			word = word.join('');
+// 			result += `${word} `;
+// 		});
+// 		result = result.slice(0, -1);
+// 		return result;
+// 	}
+// }
 
 // console.log(reverse(someString));
 
@@ -132,20 +132,73 @@ function reverse(str) {
 
 // console.log(reverse(someString));
 
-const baseCurrencies = ['USD', 'EUR'];
-const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
-function availableCurr(arr, missingCurr) {
-	delete arr[arr.indexOf(missingCurr)];
-	let result = 'Доступные валюты:\n';
-	if (arr.length < 1) {
-		return 'Нет доступных валют';
-	} else {
-		arr.forEach((element) => {
-			result += `${element}\n`;
-		});
-	}
-	return result;
-}
+// function availableCurr(arr, missingCurr) {
+// 	delete arr[arr.indexOf(missingCurr)];
+// 	let result = 'Доступные валюты:\n';
+// 	if (arr.length < 1) {
+// 		return 'Нет доступных валют';
+// 	} else {
+// 		arr.forEach((element) => {
+// 			result += `${element}\n`;
+// 		});
+// 	}
+// 	return result;
+// }
 
-console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
+// console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
+
+//////////////////////////////////////////////////
+
+// const students = [
+// 	'Peter',
+// 	'Andrew',
+// 	'Ann',
+// 	'Mark',
+// 	'Josh',
+// 	'Sandra',
+// 	'Cris',
+// 	'Bernard',
+// 	'Takesi',
+// 	'Sam',
+
+// ];
+
+// function sortStudentsByGroups(arr) {
+// 	let result = [];
+// 	let arrSorted = arr.sort();
+// 	for (let i = 0; i < 3; i++) {
+// 		result.push(arrSorted.splice(0, 3));
+// 	}
+
+// 	if (arrSorted.length > 0) {
+// 		result.push(`Оставшиеся студенты: ${arrSorted.join(', ')}`);
+// 	} else {
+// 		result.push(`Оставшиеся студенты: -`);
+// 	}
+
+// 	return result;
+// }
+
+// console.log(sortStudentsByGroups(students));
+
+// function sortStudentsByGroups(arr) {
+// 	let result = [];
+// 	let arrSorted = arr.sort();
+// 	const a = Math.round(arrSorted.length / 3);
+// 	for (let i = 0; i < a; i++) {
+// 		result.push(arrSorted.splice(0, 3));
+// 	}
+
+// 	if (arrSorted.length > 0) {
+// 		result.push(`Оставшиеся студенты: ${arrSorted.join(', ')}`);
+// 	} else {
+// 		result.push(`Оставшиеся студенты: -`);
+// 	}
+
+// 	return result;
+// }
+
+// console.log(sortStudentsByGroups(students));

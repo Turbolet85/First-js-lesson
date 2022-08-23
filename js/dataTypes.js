@@ -46,3 +46,52 @@
 
 // let arr = ['plum.png', 'orange.jpg', 6, 'apple.bmp', {}, []];
 // console.log(arr[1]);
+
+//////////////////////////////////////////////////
+
+// To string
+
+// 1)
+console.log(typeof String(null));
+// 2)
+console.log(typeof (5 + ''));
+
+const num = 5;
+console.log('https://vk.com/catalog/' + num);
+
+const fontSize = 26 + 'px';
+
+//////////////////////////////////////////////////
+
+// to Number
+
+// 1)
+console.log(typeof Number('4'));
+console.log(Number('4'));
+// 2)
+console.log(typeof +'4');
+// 3)
+console.log(parseInt('4px', 10));
+
+let answ = +prompt('Hello', '');
+//////////////////////////////////////////////////
+
+// To Boolean
+
+// false
+// 1)
+
+// 0, '', null, undefined, NaN
+let switcher = null;
+if (switcher) {
+	console.log('Working');
+}
+
+// 2)
+console.log(typeof Boolean(''));
+
+// 3)
+
+console.log(typeof !!'4444');
+
+//////////////////////////////////////////////////

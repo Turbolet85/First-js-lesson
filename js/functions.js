@@ -176,47 +176,92 @@
 
 // console.log(findMaxNumber(2, 4, 7, 12.1));
 
-function fib(num) {
-	if (typeof num !== 'number' || num <= 0 || !Number.isInteger(num)) {
-		return '';
-	}
-	let result = '';
-	let first = 0;
-	let second = 1;
-	for (let i = 0; i < num; i++) {
-		if (i + 1 === num) {
-			result += `${first}`;
-		} else {
-			result += `${first} `;
-		}
-		let third = first + second;
-		first = second;
-		second = third;
-	}
-	return result;
-}
+// function fib(num) {
+// 	if (typeof num !== 'number' || num <= 0 || !Number.isInteger(num)) {
+// 		return '';
+// 	}
+// 	let result = '';
+// 	let first = 0;
+// 	let second = 1;
+// 	for (let i = 0; i < num; i++) {
+// 		if (i + 1 === num) {
+// 			result += `${first}`;
+// 		} else {
+// 			result += `${first} `;
+// 		}
+// 		let third = first + second;
+// 		first = second;
+// 		second = third;
+// 	}
+// 	return result;
+// }
 
-// console.log(fib(10));
+// // console.log(fib(10));
 
-function first() {
-	//do something
-	setTimeout(function () {
-		console.log(1);
-	}, 500);
-}
+// function first() {
+// 	//do something
+// 	setTimeout(function () {
+// 		console.log(1);
+// 	}, 500);
+// }
 
-function second() {
-	console.log(2);
-}
+// function second() {
+// 	console.log(2);
+// }
 
-first();
-second();
+// first();
+// second();
 
-function learnJS(lang, callback) {
-	console.log(`I'm learning: ${lang}`);
-	callback();
-}
+// function learnJS(lang, callback) {
+// 	console.log(`I'm learning: ${lang}`);
+// 	callback();
+// }
 
-learnJS('Javascript', function () {
-	console.log('I learned this lesson');
-});
+// learnJS('Javascript', function () {
+// 	console.log('I learned this lesson');
+// });
+
+//////////////////////////////////////////////////
+
+// let number = 5;
+// debugger;
+
+// function logNumber() {
+// 	let number = 4;
+// 	debugger;
+// 	console.log(number);
+// }
+
+// number = 6;
+
+// logNumber();
+// debugger;
+
+//////////////////////////////////////////////////
+
+// function createCounter() {
+// 	let counter = 0;
+// 	debugger;
+
+// 	const myFunction = function () {
+// 		counter = counter + 1;
+// 		return counter;
+// 		debugger;
+// 	};
+
+// 	return myFunction;
+// 	debugger;
+// }
+
+// const increment = createCounter();
+// debugger;
+// const c1 = increment();
+// debugger;
+// const c2 = increment();
+// debugger;
+// const c3 = increment();
+// debugger;
+
+// console.log(c1, c2, c3);
+
+//////////////////////////////////////////////////
