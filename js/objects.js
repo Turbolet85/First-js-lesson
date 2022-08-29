@@ -159,64 +159,219 @@
 
 //////////////////////////////////////////////////
 
-const restorantData = {
-	menu: [
-		{
-			name: 'Salad Caesar',
-			price: '14$',
-		},
-		{
-			name: 'Pizza Diavola',
-			price: '9$',
-		},
-		{
-			name: 'Beefsteak',
-			price: '17$',
-		},
-		{
-			name: 'Napoleon',
-			price: '7$',
-		},
-	],
-	waitors: [
-		{ name: 'Alice', age: 22 },
-		{ name: 'John', age: 24 },
-	],
-	averageLunchPrice: '20$',
-	openNow: true,
-};
+// const restorantData = {
+// 	menu: [
+// 		{
+// 			name: 'Salad Caesar',
+// 			price: '14$',
+// 		},
+// 		{
+// 			name: 'Pizza Diavola',
+// 			price: '9$',
+// 		},
+// 		{
+// 			name: 'Beefsteak',
+// 			price: '17$',
+// 		},
+// 		{
+// 			name: 'Napoleon',
+// 			price: '7$',
+// 		},
+// 	],
+// 	waitors: [
+// 		{ name: 'Alice', age: 22 },
+// 		{ name: 'John', age: 24 },
+// 	],
+// 	averageLunchPrice: '20$',
+// 	openNow: true,
+// };
 
-function isOpen(prop) {
-	let answer = '';
-	prop ? (answer = 'Открыто') : (answer = 'Закрыто');
+// function isOpen(prop) {
+// 	let answer = '';
+// 	prop ? (answer = 'Открыто') : (answer = 'Закрыто');
 
-	return answer;
-}
+// 	return answer;
+// }
 
-console.log(isOpen(restorantData.openNow));
+// console.log(isOpen(restorantData.openNow));
 
-function isAverageLunchPriceTrue(fDish, sDish, average) {
-	if (
-		+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1) <
-		+average.slice(0, -1)
-	) {
-		return 'Цена ниже средней';
-	} else {
-		return 'Цена выше средней';
-	}
-}
+// function isAverageLunchPriceTrue(fDish, sDish, average) {
+// 	if (
+// 		+fDish.price.slice(0, -1) + +sDish.price.slice(0, -1) <
+// 		+average.slice(0, -1)
+// 	) {
+// 		return 'Цена ниже средней';
+// 	} else {
+// 		return 'Цена выше средней';
+// 	}
+// }
 
-console.log(
-	isAverageLunchPriceTrue(
-		restorantData.menu[0],
-		restorantData.menu[1],
-		restorantData.averageLunchPrice
-	)
-);
-function transferWaitors(data) {
-	const copy = JSON.parse(JSON.stringify(data));
-	copy.waitors[0] = { name: 'Mike', age: 32 };
-	return copy;
-}
+// console.log(
+// 	isAverageLunchPriceTrue(
+// 		restorantData.menu[0],
+// 		restorantData.menu[1],
+// 		restorantData.averageLunchPrice
+// 	)
+// );
+// function transferWaitors(data) {
+// 	const copy = JSON.parse(JSON.stringify(data));
+// 	copy.waitors[0] = { name: 'Mike', age: 32 };
+// 	return copy;
+// }
 
-transferWaitors(restorantData);
+// transferWaitors(restorantData);
+
+//////////////////////////////////////////////////
+// important object methods/ get keys values and pairs as array
+
+// Object.keys
+// Object.values
+// Object.entries
+
+//////////////////////////////////////////////////
+
+// const salaries = {
+// 	John: 500,
+// 	Ivan: 1000,
+// 	Anna: 5000,
+// 	sayHello: function () {
+// 		console.log('Hello');
+// 	},
+// };
+
+// salaries[Symbol.iterator] = function () {
+// 	return {
+// 		current: this.John,
+// 		last: this.Anna,
+// 		next() {
+// 			if (this.current < this.last) {
+// 				this.current += 500;
+// 				return { done: false, value: this.current };
+// 			} else {
+// 				return { done: true };
+// 			}
+// 		},
+// 	};
+// };
+
+// for (const res of salaries) {
+// 	console.log(res);
+// }
+//////////////////////////////////////////////////
+
+// const shops = [{ rise: 500 }, { oil: 200 }, { bread: 50 }];
+// const budget = [5000, 15000, 20000];
+
+// const map = new Map([[{ paper: 400 }, 8000]]);
+
+// map.set(shops[0], 5000);
+// map.set(shops[1], 15000);
+// map.set(shops[2], 25000);
+
+// shops.forEach((shop, i) => {
+// 	map.set(shop, budget[i]);
+// });
+
+// console.log(map);
+// console.log(map.get(shops[0]));
+// console.log(map.has(shops[0]));
+// map.delete(key);
+// map.clear();
+// map.size();
+// map.keys();
+
+// const goods = [];
+// for (let shop of map.keys()) {
+// 	goods.push(Object.keys(shop)[0]);
+// }
+// console.log(goods);
+
+// for (let price of map.values()) {
+// 	console.log(price);
+// }
+
+// for (let price of map.entries()) {
+// 	console.log(price);
+// }
+
+// for (let [shop, price] of map.entries()) {
+// 	console.log(price, shop);
+// }
+
+// map.forEach((value, key, map)=> {
+// 	console.log(key, value);
+// });
+//////////////////////////////////////////////////
+// const restorantData = {
+// 	menu: [
+// 		{
+// 			name: 'Salad Caesar',
+// 			price: '14$',
+// 		},
+// 		{
+// 			name: 'Pizza Diavola',
+// 			price: '9$',
+// 		},
+// 		{
+// 			name: 'Beefsteak',
+// 			price: '17$',
+// 		},
+// 		{
+// 			name: 'Napoleon',
+// 			price: '7$',
+// 		},
+// 	],
+// 	waitors: [
+// 		{ name: 'Alice', age: 22 },
+// 		{ name: 'John', age: 24 },
+// 	],
+// 	averageLunchPrice: '20$',
+// 	openNow: true,
+// };
+
+// const restrauntMap = new Map(Object.entries(restorantData));
+// // console.log(restrauntMap);
+
+// const newUserObj = Object.fromEntries(restrauntMap);
+// console.log(newUserObj);
+
+//////////////////////////////////////////////////
+
+// const arr = [1, 1, 2, 2, 3, 3, 4, 5, 6, 6, 2, 3];
+// const set = new Set(arr);
+// console.log(set);
+
+// function unique(arr) {
+// 	return Array.from(new Set(arr));
+// }
+// console.log(unique(arr));
+//////////////////////////////////////////////////
+
+// function amountOfPages(summary) {
+// 	let i = 0;
+// 	let str = '';
+// 	while (str.length < summary) {
+// 		i++;
+// 		str = str + i;
+// 	}
+// 	return i;
+// }
+// console.log(amountOfPages(1095));
+
+// function isPangram(str) {
+// 	return new Set(str.split(' ').join('').toLowerCase().split('')).size == 26;
+// }
+// console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+
+// function deepCount(a) {
+// 	let result = 0;
+// 	a.forEach((element) => {
+// 		result++;
+// 		if (Array.isArray(element)) {
+// 			result += deepCount(element);
+// 		}
+// 	});
+// 	return result;
+// }
+
+// console.log(deepCount(["1", 5, "3", ["10"]]));

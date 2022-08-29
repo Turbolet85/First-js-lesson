@@ -19,9 +19,6 @@
 // console.log(copy);
 // console.log(obj);
 
-
-
-
 // function copyObj(mainObj) {
 //     let objCopy = {};
 
@@ -49,8 +46,6 @@
 
 // console.log(newNumbers);
 // console.log(numbers);
-
-
 
 // const add = {
 //     d: 17,
