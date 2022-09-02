@@ -209,22 +209,56 @@
 
 //////////////////////////////////////////////////
 
-function fib(max) {
-	let first = 1;
-	let second = 1;
-	let third = 2;
-	let mult = 0;
-	let arr = [];
-	let counter = 0;
+// function fib(max) {
+// 	let first = 1;
+// 	let second = 1;
+// 	let third = 2;
+// 	let mult = 0;
+// 	let arr = [];
+// 	let counter = 0;
 
-	while (mult <= max) {
-		counter++;
-		third = first + second;
-		first = second;
-		second = third;
-		mult = first * second;
-		arr.push(mult);
+// 	while (mult <= max) {
+// 		counter++;
+// 		third = first + second;
+// 		first = second;
+// 		second = third;
+// 		mult = first * second;
+// 		arr.push(mult);
+// 	}
+// 	return arr[counter - 1];
+// }
+// console.log(fib(4895));
+//////////////////////////////////////////////////
+
+// function generateHashtag(str) {
+// 	if (str == '') {
+// 		return false;
+// 	} else {
+// 		str = str.replace(/(\b[a-z](?!\s))/g, (x) => {
+// 			return x.toUpperCase();
+// 		});
+// 		str = str.replace(/[^a-zA-Z]/g, '');
+// 		if (str.length > 139 || str == '') {
+// 			return false;
+// 		} else {
+// 			return '#'+ str;
+// 		}
+// 	}
+// }
+
+function DNAStrand(dna) {
+	let arr = dna.split('');
+	for (let i = 0; i < dna.length; i++) {
+		if (arr[i] == 'A') {
+			arr[i] = 'T';
+		} else if (arr[i] == 'T') {
+			arr[i] = 'A';
+		} else if (arr[i] == 'C') {
+			arr[i] = 'G';
+		} else if (arr[i] == 'G') {
+			arr[i] = 'C';
+		}
 	}
-	return arr[counter - 1];
+	return arr.join('');
 }
-console.log(fib(4895));
+console.log(DNAStrand('ATTGC'));

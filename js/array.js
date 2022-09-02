@@ -202,3 +202,116 @@
 // }
 
 // console.log(sortStudentsByGroups(students));
+
+////////////////////////////////////////////////// filter
+
+// const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
+
+// const shortNames = names.filter((name) => {
+// 	return name.length < 5;
+// });
+
+// console.log(shortNames);
+
+////////////////////////////////////////////////// map
+
+// const names = ['IvAn', 'AnN', 'KsenIa', 'voldemart'];
+
+// const result = names.map((item) => {
+// 	return item.toLowerCase();
+// });
+// console.log(result);
+
+////////////////////////////////////////////////// some/every
+
+// const some = [4, 'qwq', 'sdgfsd'];
+
+// console.log(some.some((item) => typeof item === 'number'));
+
+//////////////////////////////////////////////////
+
+// const obj = {
+// 	ivan: 'person',
+// 	ann: 'person',
+// 	dog: 'animal',
+// 	cat: 'animal',
+// };
+
+// const newArr = Object.entries(obj)
+// 	.filter((item) => item[1] === 'person')
+// 	.map((item) => item[0]);
+
+// console.log(newArr);
+
+// const films = [
+// 	{
+// 		name: 'Titanic',
+// 		rating: 9,
+// 	},
+// 	{
+// 		name: 'Die hard 5',
+// 		rating: 5,
+// 	},
+// 	{
+// 		name: 'Matrix',
+// 		rating: 8,
+// 	},
+// 	{
+// 		name: 'Some bad film',
+// 		rating: 4,
+// 	},
+// ];
+
+// function showGoodFilms(arr) {
+// 	return arr.filter((elem) => elem.rating >= 8);
+// }
+
+// console.log(showGoodFilms(films));
+
+// function showListOfFilms(arr) {
+// 	return arr.reduce((acum, elem) => acum + `${elem.name}, `, '').slice(0, -2);
+// }
+// console.log(showListOfFilms(films));
+
+// function setFilmsIds(arr) {
+// 	arr.forEach((element, i) => {
+// 		element.id = i;
+// 	});
+// 	return arr;
+// }
+
+// // console.log(setFilmsIds(films));
+
+// const tranformedArray = setFilmsIds(films);
+
+// function checkFilms(arr) {
+// 	return arr.every((elem) => 'id' in elem);
+// }
+
+// console.log(checkFilms(tranformedArray));
+//////////////////////////////////////////////////
+// const funds = [
+// 	{ amount: -1400 },
+// 	{ amount: 2400 },
+// 	{ amount: -1000 },
+// 	{ amount: 500 },
+// 	{ amount: 10400 },
+// 	{ amount: -11400 },
+// ];
+
+// const getPositiveIncomeAmount = (data) => {
+// 	return data.reduce((acc, elem) => {
+// 		return elem.amount > 0 ? acc + elem.amount : acc;
+// 	}, 0);
+// };
+
+// const getTotalIncomeAmount = (data) => {
+// 	if (data.some((elem) => elem.amount < 0)) {
+// 		return data.reduce((a, b) => a + b.amount, 0);
+// 	} else {
+// 		return getPositiveIncomeAmount(data);
+// 	}
+// };
+
+// console.log(getTotalIncomeAmount(funds));
+//////////////////////////////////////////////////
